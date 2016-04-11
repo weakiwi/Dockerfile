@@ -6,6 +6,8 @@ ADD sources.list /etc/apt/sources.list
 RUN sudo touch /root/install_lnmp.sh
 RUN sudo touch /root/init.sh
 ADD install_lnmp.sh /root/install_lnmp.sh
+ADD install_vim.sh /root/install_vim.sh
+ADD install_zsh.sh /root/install_zsh.sh
 ADD init.sh /root/init.sh
 ADD update.sh /root/update.sh
 

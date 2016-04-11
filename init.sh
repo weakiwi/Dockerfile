@@ -10,6 +10,7 @@ case $user_input in
     1) /bin/bash /root/install_lnmp.sh ;;
     2) /bin/bash /root/install_vim.sh ;;
     3) /bin/bash /root/install_zsh.sh ;;
+    4) /bin/bash /root/install_zsh.sh
 esac    
 
 

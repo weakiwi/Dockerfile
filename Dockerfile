@@ -10,6 +10,6 @@ RUN sudo chmod a+x init.sh
 
 ENTRYPOINT /bin/bash init.sh
 
-EXPOSE　22
+EXPOSE 22
 EXPOSE 3306
 EXPOSE 80

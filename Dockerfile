@@ -8,7 +8,7 @@ RUN sudo touch /root/init.sh
 ADD install_lnmp.sh /root/install_lnmp.sh
 ADD init.sh /root/init.sh
 
-ENTRYPOINT /bin/bash init.sh
+ENTRYPOINT /bin/bash /root/init.sh
 
 EXPOSE 22
 EXPOSE 3306

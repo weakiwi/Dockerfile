@@ -7,6 +7,7 @@ RUN sudo touch /root/install_lnmp.sh
 RUN sudo touch /root/init.sh
 ADD install_lnmp.sh /root/install_lnmp.sh
 ADD init.sh /root/init.sh
+ADD update.sh /root/update.sh
 
 ENTRYPOINT /bin/bash /root/init.sh
 

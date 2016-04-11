@@ -6,6 +6,7 @@ ADD sources.list /etc/apt/sources.list
 ADD install_lnmp.sh /root/install_lnmp.sh
 ADD install_vim.sh /root/install_vim.sh
 ADD install_zsh.sh /root/install_zsh.sh
+ADD install_python.sh /root/install_python.sh
 ADD init.sh /root/init.sh
 ADD update.sh /root/update.sh
 

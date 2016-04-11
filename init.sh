@@ -1,6 +1,4 @@
 #!/bin/bash
-PATH=/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
-export PATH
 echo -e "it will start apt-get update and install wget and curl \n\n"
 sh /root/update.sh
 echo -e "1) install lnmp \n\n"

@@ -2,7 +2,7 @@
 PATH=/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 echo -e "it will start apt-get update and install wget and curl \n\n"
-/bin/bash /root/update.sh
+sh /root/update.sh
 echo -e "1) install lnmp \n\n"
 echo -e "2) install vim and spf13 \n\n"
 echo -e "3) install zsh and oh-my-zsh \n\n"

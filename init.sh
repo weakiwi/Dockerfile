@@ -13,9 +13,9 @@ read -p "Please input: " user_input
 if[$user_input = 1];then
     /bin/bash /root/install_lnmp.sh
 if[$user_input = 2];then
-    /bin/bash /root/install_vim.sh
+    curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 if[$user_input = 3];then
-    /bin/bash /root/install_zsh.sh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
     echo -e "input error"
 

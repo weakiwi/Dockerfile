@@ -7,9 +7,9 @@ echo -e "3) install zsh and oh-my-zsh \n"
 echo -e "4) install all of this \n"
 read -p "Please input: " user_input
 case $user_input in
-    1) /bin/bash install_lnmp.sh ;;
-    2) /bin/bash install_vim.sh ;;
-    3) /bin/bash install_zsh.sh ;;
+    1) /bin/bash /root/install_lnmp.sh ;;
+    2) /bin/bash /root/install_vim.sh ;;
+    3) /bin/bash /root/install_zsh.sh ;;
 esac    
 
 

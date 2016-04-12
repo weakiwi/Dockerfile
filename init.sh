@@ -3,9 +3,9 @@ if [ -f /root/count.session ]; then
     echo "already configured!"
     exit 0
 else
-    touch /root/count.session
+    touch /root/count.session > /dev/null
     echo -e "it will start apt-get update and install wget and curl \n\n"
-    sh /root/update.sh
+    sh /root/update.sh > /dev/null
     echo -e "1) install lnmp \n"
     echo -e "2) install vim and spf13 \n"
     echo -e "3) install zsh and oh-my-zsh \n"

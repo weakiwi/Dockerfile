@@ -1,5 +1,5 @@
 #!/bin/bash
-if [-f /root/count.session]; then
+if [ -f /root/count.session ]; then
     echo "already configured!"
     exit 0
 else

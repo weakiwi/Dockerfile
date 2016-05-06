@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM philipz/rpi-raspbian:latest
 MAINTAINER weakiwi <dengyi0215@gmail.com>
 
 

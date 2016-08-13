@@ -10,6 +10,6 @@ ADD installYilia.sh /root/installYilia.sh
 ADD _config.yml /root/_config.yml
 RUN chmod a+x /root/installHexo.sh
 RUN chmod a+x /root/installYilia.sh
-RUN /bin/bash /root/installHexo.sh
-ENTRYPOINT /bin.bash /root/installYilia.sh
+RUN  /root/installHexo.sh
+ENTRYPOINT /bin/bash /root/installYilia.sh
 EXPOSE 4000

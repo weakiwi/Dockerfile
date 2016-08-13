@@ -5,7 +5,7 @@ MAINTAINER weakiwi <dengyi0215@gmail.com>
 #RUN chmod a+x /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y nodejs
-RUN apt-get install npm
+RUN apt-get install -y npm
 ADD installhexo.sh /root/installHexo.sh
 ADD installYilia.sh /root/installYilia.sh
 ADD _config.yml /root/_config.yml

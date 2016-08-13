@@ -1,4 +1,4 @@
-FROM docker pull daocloud.io/library/ubuntu:14.04.5
+FROM daocloud.io/library/ubuntu:14.04.5
 MAINTAINER weakiwi <dengyi0215@gmail.com>
 RUN rm /etc/apt/sources.list
 ADD sources.list /etc/apt/sources.list

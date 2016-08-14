@@ -9,6 +9,7 @@ if [ $? -eq 0 ]; then
 else
     echo "first time to do these"
     touch /root/a.txt
+    hexo init
     read -p "enter your github pages name:" add
     sed -i s/myusername/${add}/g /root/_config.yml
     read -p "enter your github pages branch:" branch

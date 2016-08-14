@@ -36,6 +36,7 @@ EXPOSE 4000
 WORKDIR /blog
 ADD installhexo.sh
 #ENTRYPOINT ["hexo"]
+ADD _config.yml
 
 USER hexo
-ENTRYPOINT /bin/sh installhexo.sh
+ENTRYPOINT /bin/sh installYilia.sh

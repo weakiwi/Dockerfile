@@ -34,8 +34,14 @@ VOLUME /blog
 EXPOSE 4000
 
 WORKDIR /blog
-ADD installhexo.sh /blog/installhexo.sh
-#ENTRYPOINT ["hexo"]
 ADD _config.yml /blog/_config.yml
+ADD installhexo.sh /blog/installhexo.sh
+RUN chmod a+x /blog/installhexo.sh
+RUN chmod a+x /blog/_config.yml
+#ENTRYPOINT ["hexo"]
 
 USER hexo
+
+ENTRYPOINT sh /blog/installhexo.sh
+
+

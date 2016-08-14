@@ -39,4 +39,4 @@ ADD installhexo.sh /blog/installhexo.sh
 ADD _config.yml /blog/_config.yml
 
 USER hexo
-ENTRYPOINT /bin/sh /blog/installYilia.sh
+ENTRYPOINT  installYilia.sh

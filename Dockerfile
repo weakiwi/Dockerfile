@@ -1,17 +1,40 @@
-FROM daocloud.io/library/ubuntu:14.04.5
-MAINTAINER weakiwi <dengyi0215@gmail.com>
-#RUN rm /etc/apt/sources.list
-#ADD sources.list /etc/apt/sources.list
-#RUN chmod a+x /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get install -y git
-RUN apt-get install -y nodejs
-RUN apt-get install -y npm
-ADD installhexo.sh /root/installHexo.sh
-ADD installYilia.sh /root/installYilia.sh
-ADD _config.yml /root/_config.yml
-RUN chmod a+x /root/installHexo.sh
-RUN chmod a+x /root/installYilia.sh
-RUN  /root/installHexo.sh
-ENTRYPOINT /bin/bash /root/installYilia.sh
+#
+# Hexo Dockerfile
+#
+# https://github.com/billryan/docker-hexo
+#
+
+# Pull base image.
+FROM ubuntu:14.04
+MAINTAINER Yuan Bin <me@yuanbin.me>
+
+# Install git and nodejs
+RUN apt-get update && \
+    apt-get install -y git-core nodejs npm
+
+RUN ln -s /usr/bin/nodejs /usr/bin/node
+
+# Install pandoc[Optional]
+#RUN apt-get install -y pandoc
+
+# Install Hexo
+RUN npm install -g hexo
+
+# add non-root user
+#RUN groupadd hexo && useradd -m -g hexo hexo
+# replace gid and uid with your currently $GID and $UID
+RUN useradd -m -g 100 -u 1000 hexo
+
+ENV HOME /home/hexo
+
+# Mount a Host Directory as a Data Volume for hexo
+VOLUME /blog
+
+# Expose ports.
 EXPOSE 4000
+
+WORKDIR /blog
+
+#ENTRYPOINT ["hexo"]
+
+USER hexo

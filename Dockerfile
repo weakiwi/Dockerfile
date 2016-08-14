@@ -36,7 +36,9 @@ EXPOSE 4000
 WORKDIR /blog
 ADD _config.yml /blog/_config.yml
 ADD installhexo.sh /blog/installhexo.sh
+ADD installYilia.sh /blog/installYilia.sh
 RUN chmod a+x /blog/installhexo.sh
+RUN chmod a+x /blog/installYilia.sh
 RUN chmod a+x /blog/_config.yml
 #ENTRYPOINT ["hexo"]
 

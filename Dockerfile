@@ -40,8 +40,6 @@ RUN chmod a+x /blog/installhexo.sh
 RUN chmod a+x /blog/_config.yml
 #ENTRYPOINT ["hexo"]
 
-USER hexo
-
 ENTRYPOINT sh /blog/installhexo.sh
 
 

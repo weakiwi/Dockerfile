@@ -34,7 +34,8 @@ VOLUME /blog
 EXPOSE 4000
 
 WORKDIR /blog
-
+ADD installhexo.sh
 #ENTRYPOINT ["hexo"]
 
 USER hexo
+ENTRYPOINT /bin/sh installhexo.sh

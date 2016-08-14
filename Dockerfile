@@ -4,6 +4,7 @@ MAINTAINER weakiwi <dengyi0215@gmail.com>
 #ADD sources.list /etc/apt/sources.list
 #RUN chmod a+x /etc/apt/sources.list
 RUN apt-get update
+RUN apt-get install -y git
 RUN apt-get install -y nodejs
 RUN apt-get install -y npm
 ADD installhexo.sh /root/installHexo.sh

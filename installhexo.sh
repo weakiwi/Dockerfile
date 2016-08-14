@@ -1,5 +1,5 @@
 npm install -g cnpm --registry=https://registry.npm.taobao.org
-cnpm install -g hexo
+/usr/bin/npm install -g hexo
 mkdir hexo
 chmod 644 -R hexo
 cd hexo

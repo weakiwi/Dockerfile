@@ -34,9 +34,9 @@ VOLUME /blog
 EXPOSE 4000
 
 WORKDIR /blog
-ADD installhexo.sh
+ADD installhexo.sh /blog/installhexo.sh
 #ENTRYPOINT ["hexo"]
-ADD _config.yml
+ADD _config.yml /blog/installhexo.sh
 
 USER hexo
-ENTRYPOINT /bin/sh installYilia.sh
+ENTRYPOINT /bin/sh /blog/installYilia.sh

@@ -17,3 +17,6 @@ docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose; \
 chmod +x /usr/local/bin/docker-compose
 USER jenkins
 RUN /usr/local/bin/install-plugins.sh scm-api git-client git greenballs
+
+EXPOSE 8080
+EXPOSE 50000

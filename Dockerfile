@@ -18,5 +18,5 @@ chmod +x /usr/local/bin/docker-compose
 USER jenkins
 RUN /usr/local/bin/install-plugins.sh scm-api git-client git greenballs
 
-EXPOSE 8080
-EXPOSE 50000
+EXPOSE 8089:8080
+EXPOSE 50000:50000
